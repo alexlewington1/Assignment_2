@@ -1,10 +1,51 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Ipswich Retail</title>
+  <link rel="stylesheet" href="{% static 'css/landingpage.css' %}">
 </head>
 <body>
+  <header>
+    <div class="company-logo">D</div>
+    <nav class="navbar">
+      <ul class="nav-items">
+        <li class="nav-item"><a href="/" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="/products" class="nav-link">PRODUCTS</a></li>
+        <li class="nav-item"><a href="/about/" class="nav-link">ABOUT</a></li>
+        <li class="nav-item"><a href="/contactus/" class="nav-link">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="bx bx-menu"></i>
+      <i class="bx bx-x"></i>
+    </div>
+  </header>
 
+  <main>
+    <section class="container section-1" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+      <!-- About Text -->
+      <div class="slogan" style="text-align: left;">
+        <h1 class="company-title">About Ipswich Retail</h1>
+        <p class="company-slogan">
+          Ipswich Retail is dedicated to bringing the best technology and computer solutions to our customers. 
+          Founded with a passion for innovation and quality, our mission is to provide cutting-edge products 
+          that enhance productivity and simplify your life.
+        </p>
+        <p class="company-slogan">
+          Our team of experts is committed to excellence, offering exceptional customer service and support 
+          to ensure every experience with Ipswich Retail is seamless and enjoyable. We believe in building 
+          lasting relationships with our customers through trust, integrity, and innovation.
+        </p>
+      </div>
+
+      <!-- About Image -->
+      <div class="home-computer-container">
+        <img class="home-computer" src="https://github.com/r-e-d-ant/Computer-store-website/blob/main/assets/images/home_img.png?raw=true" alt="Team working on computers">
+      </div>
+    </section>
+  </main>
 </body>
 </html>
