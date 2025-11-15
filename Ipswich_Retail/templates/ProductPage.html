@@ -85,36 +85,20 @@
       <h1 class="company-title" style="margin-bottom: 1rem;">Our Products</h1>
       <p class="company-slogan" style="margin-bottom: 2rem;">Explore our wide range of high-quality tech products designed for productivity and performance.</p>
 
-      <div class="products-section">
-        <!-- Example product card -->
-        <div class="product-card">
-          <img src="{% static 'images/laptop.webp' %}" alt="Product 1">
-          <div class="product-name">High-Performance Laptop</div>
-          <div class="product-description">Powerful laptop with fast processing and sleek design.</div>
-          <div class="product-price">£1,299</div>
-        </div>
+     <div class="products-section">
+  {% for product in products %}
+    <div class="product-card">
+      <img src="{{ product.image.url }}" alt="{{ product.name }}">
 
-        <div class="product-card">
-          <img src="{% static 'images/computer.jpg' %}" alt="Product 2">
-          <div class="product-name">Gaming Desktop</div>
-          <div class="product-description">Custom gaming rig with top-of-the-line graphics and speed.</div>
-          <div class="product-price">£2,199</div>
-        </div>
+      <div class="product-name">{{ product.name }}</div>
+      <div class="product-description">{{ product.description }}</div>
+      <div class="product-price">£{{ product.price }}</div>
+    </div>
+  {% empty %}
+    <p>No products available.</p>
+  {% endfor %}
+</div>
 
-        <div class="product-card">
-          <img src="{% static 'images/Keyboard.jpg' %}" alt="Product 3">
-          <div class="product-name">Mechanical Keyboard</div>
-          <div class="product-description">Responsive mechanical keyboard with RGB lighting.</div>
-          <div class="product-price">£149</div>
-        </div>
-
-        <div class="product-card">
-          <img src="{%  static 'images/Mouse.webp' %}" alt="Product 4">
-          <div class="product-name">Wireless Mouse</div>
-          <div class="product-description">Ergonomic wireless mouse with customizable buttons.</div>
-          <div class="product-price">£69</div>
-        </div>
-      </div>
     </section>
   </main>
 </body>
